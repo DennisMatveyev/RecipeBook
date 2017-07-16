@@ -30,6 +30,11 @@ export class RecipeService {
     return this.recipes.slice();
   }
 
+  // it is meant the ID of the recipe and the index in an array are the same
+  getRecipe(idx: number) {
+    return this.recipes[idx];
+  }
+
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.slService.addIngredients(ingredients);
   }
